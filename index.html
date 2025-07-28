@@ -1,0 +1,233 @@
+<!-- Elisa Foster Art - Portfolio Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisa Foster Art</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #1e1e1c;
+      color: #f0e9d2;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #2c2c28;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e0c097;
+    }
+
+    .nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #d9cbaa;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background-color: #2c2c28;
+    }
+
+    h1, h2 {
+      color: #d6b877;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .art-piece img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .art-piece img:hover {
+      transform: scale(1.03);
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c2c28;
+      border-top: 1px solid #444;
+    }
+
+    a {
+      color: #b8a98c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Elisa Foster Art</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="hero">
+        <h1>Welcome to Elisa Foster Art</h1>
+        <p>Exploring nature and emotion through texture and color.</p>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="gallery">
+        <div class="art-piece">
+          <img src="images/art1.jpg" alt="Artwork 1" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art2.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art3.jpg" alt="Artwork 3" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art4.jpg" alt="Artwork 4" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art5.jpg" alt="Artwork 5" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art6.jpg" alt="Artwork 6" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art7.jpg" alt="Artwork 7" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art8.jpg" alt="Artwork 8" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art9.jpg" alt="Artwork 9" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art10.jpg" alt="Artwork 10" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art11.jpg" alt="Artwork 11" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art12.jpg" alt="Artwork 12" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art13.jpg" alt="Artwork 13" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art14.jpg" alt="Artwork 14" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art15.jpg" alt="Artwork 15" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art16.jpg" alt="Artwork 16" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art17.jpg" alt="Artwork 17" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art18.jpg" alt="Artwork 18" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art19.jpg" alt="Artwork 19" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art20.jpg" alt="Artwork 20" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art21.jpg" alt="Artwork 21" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art22.jpg" alt="Artwork 22" onclick="openLightbox(this)">
+        </div>
+        <div class="art-piece">
+          <img src="images/art23.jpg" alt="Artwork 23" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About the Artist</h2>
+      <p>Elisa Foster is a visual artist inspired by natural forms, human emotion, and the tactile qualities of her materials. Each piece is a personal exploration rendered in organic textures and rich, earthy tones.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Follow Elisa on social media:</p>
+      <ul>
+        <li><a href="#">Instagram (placeholder)</a></li>
+        <li><a href="#">Facebook (placeholder)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded Artwork">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Elisa Foster Art. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
