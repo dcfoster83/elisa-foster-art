@@ -1,55 +1,50 @@
 <!-- Elisa Foster Art - Portfolio Website -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elisa Foster Art</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Elisa Foster Art
+  </title>
+  <link href="style.css" rel="stylesheet"/>
   <style>
-    body {
+   body {
       margin: 0;
-      font-family: 'Cormorant Garamond', serif;
-      background: url('images/bg-texture.jpg') repeat;
+      font-family: 'Georgia', serif;
       background-color: #1e1e1c;
-      color: #f3e7d3;
+      color: #f0e9d2;
     }
 
     header {
       position: sticky;
       top: 0;
-      background-color: rgba(44, 44, 40, 0.95);
+      background-color: #2c2c28;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #5c4e3a;
+      border-bottom: 1px solid #444;
       z-index: 10;
     }
 
     .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #e0ba91;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e0c097;
     }
 
     .nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: #dec9a3;
+      color: #d9cbaa;
       font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav a:hover {
-      color: #f0dab0;
     }
 
     .hero {
       text-align: center;
       padding: 5rem 2rem;
-      background-color: rgba(44, 44, 40, 0.85);
+      background-color: #2c2c28;
     }
 
     h1, h2 {
@@ -66,20 +61,17 @@
     .art-piece img {
       width: 100%;
       height: auto;
-      border: 1px solid #5c4e3a;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      border: 2px solid #444;
       cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.2s;
     }
 
     .art-piece img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 14px rgba(255, 235, 200, 0.4);
+      transform: scale(1.03);
     }
 
     section {
       padding: 2rem;
-      background-color: rgba(30, 30, 28, 0.9);
     }
 
     #lightbox {
@@ -89,7 +81,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
       z-index: 1000;
@@ -98,353 +90,661 @@
     #lightbox img {
       max-width: 90%;
       max-height: 90%;
-      box-shadow: 0 0 20px rgba(240, 230, 210, 0.8);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: rgba(44, 44, 40, 0.95);
-      border-top: 1px solid #5c4e3a;
+      background-color: #2c2c28;
+      border-top: 1px solid #444;
     }
 
     a {
-      color: #c9b693;
+      color: #b8a98c;
     }
   </style>
-</head>
-<body>
+ </head>
+ <body>
   <header>
-    <div class="logo">Elisa Foster Art</div>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+   <div class="logo">
+    Elisa Foster Art
+   </div>
+   <nav class="nav">
+    <a href="#home">
+     Home
+    </a>
+    <a href="#portfolio">
+     Portfolio
+    </a>
+    <a href="#about">
+     About
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+   </nav>
   </header>
-
   <main>
-    <section id="home">
-      <div class="hero">
-        <h1>Welcome to Elisa Foster Art</h1>
-        <p>Exploring nature and emotion through texture and color.</p>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="gallery">
-        <div class="art-piece">
-          <img src="images/art1.jpg" alt="Artwork 1" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art2.jpg" alt="Artwork 2" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art3.jpg" alt="Artwork 3" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art4.jpg" alt="Artwork 4" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art5.jpg" alt="Artwork 5" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art6.jpg" alt="Artwork 6" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art7.jpg" alt="Artwork 7" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art8.jpg" alt="Artwork 8" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art9.jpg" alt="Artwork 9" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art10.jpg" alt="Artwork 10" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art11.jpg" alt="Artwork 11" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art12.jpg" alt="Artwork 12" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art13.jpg" alt="Artwork 13" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art14.jpg" alt="Artwork 14" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art15.jpg" alt="Artwork 15" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art16.jpg" alt="Artwork 16" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art17.jpg" alt="Artwork 17" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art18.jpg" alt="Artwork 18" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art19.jpg" alt="Artwork 19" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art20.jpg" alt="Artwork 20" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art21.jpg" alt="Artwork 21" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art22.jpg" alt="Artwork 22" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art23.jpg" alt="Artwork 23" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art24.jpg" alt="Artwork 24" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art25.jpg" alt="Artwork 25" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art26.jpg" alt="Artwork 26" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art27.jpg" alt="Artwork 27" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art28.jpg" alt="Artwork 28" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art29.jpg" alt="Artwork 29" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art30.jpg" alt="Artwork 30" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art31.jpg" alt="Artwork 31" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art32.jpg" alt="Artwork 32" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art33.jpg" alt="Artwork 33" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art34.jpg" alt="Artwork 34" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art35.jpg" alt="Artwork 35" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art36.jpg" alt="Artwork 36" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art37.jpg" alt="Artwork 37" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art38.jpg" alt="Artwork 38" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art39.jpg" alt="Artwork 39" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art40.jpg" alt="Artwork 40" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art41.jpg" alt="Artwork 41" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art42.jpg" alt="Artwork 42" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art43.jpg" alt="Artwork 43" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art44.jpg" alt="Artwork 44" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art45.jpg" alt="Artwork 45" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art46.jpg" alt="Artwork 46" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art47.jpg" alt="Artwork 47" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art48.jpg" alt="Artwork 48" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art49.jpg" alt="Artwork 49" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art50.jpg" alt="Artwork 50" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art51.jpg" alt="Artwork 51" onclick="openLightbox(this)"> 
-        </div>
-        <div class="art-piece">
-          <img src="images/art52.jpg" alt="Artwork 52" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art53.jpg" alt="Artwork 53" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art54.jpg" alt="Artwork 54" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art55.jpg" alt="Artwork 55" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art56.jpg" alt="Artwork 56" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art57.jpg" alt="Artwork 57" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art58.jpg" alt="Artwork 58" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art59.jpg" alt="Artwork 59" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art60.jpg" alt="Artwork 60" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art61.jpg" alt="Artwork 61" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art62.jpg" alt="Artwork 62" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art63.jpg" alt="Artwork 63" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art64.jpg" alt="Artwork 64" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art65.jpg" alt="Artwork 65" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art66.jpg" alt="Artwork 66" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art67.jpg" alt="Artwork 67" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art68.jpg" alt="Artwork 68" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art69.jpg" alt="Artwork 69" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art70.jpg" alt="Artwork 70" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art71.jpg" alt="Artwork 71" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art72.jpg" alt="Artwork 72" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art73.jpg" alt="Artwork 73" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art74.jpg" alt="Artwork 74" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art75.jpg" alt="Artwork 75" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art76.jpg" alt="Artwork 76" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art77.jpg" alt="Artwork 77" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art78.jpg" alt="Artwork 78" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art79.jpg" alt="Artwork 79" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art80.jpg" alt="Artwork 80" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art81.jpg" alt="Artwork 81" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art82.jpg" alt="Artwork 82" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art83.jpg" alt="Artwork 83" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art84.jpg" alt="Artwork 84" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art85.jpg" alt="Artwork 85" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art86.jpg" alt="Artwork 86" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art87.jpg" alt="Artwork 87" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art88.jpg" alt="Artwork 88" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art89.jpg" alt="Artwork 89" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art90.jpg" alt="Artwork 90" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art91.jpg" alt="Artwork 91" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art92.jpg" alt="Artwork 92" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art93.jpg" alt="Artwork 93" onclick="openLightbox(this)">
-        </div>
-        <div class="art-piece">
-          <img src="images/art94.jpg" alt="Artwork 94" onclick="openLightbox(this)">
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About the Artist</h2>
-      <p>Elisa Foster is a visual artist inspired by natural forms, human emotion, and the tactile qualities of her materials. Each piece is a personal exploration rendered in organic textures and rich, earthy tones.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Follow Elisa on social media:</p>
-      <ul>
-        <li><a href="#">Instagram (placeholder)</a></li>
-        <li><a href="#">Facebook (placeholder)</a></li>
-      </ul>
-    </section>
+   <section id="home">
+    <div class="hero">
+     <h1>
+      Welcome to Elisa Foster Art
+     </h1>
+     <p>
+      Exploring nature and emotion through texture and color.
+     </p>
+    </div>
+   </section>
+   <section id="portfolio">
+    <h2>
+     Portfolio
+    </h2>
+    <div class="gallery">
+     <div class="art-piece">
+      <img alt="Artwork 1" onclick="openLightbox(this)" src="images/art1.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 2" onclick="openLightbox(this)" src="images/art2.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 3" onclick="openLightbox(this)" src="images/art3.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 4" onclick="openLightbox(this)" src="images/art4.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 5" onclick="openLightbox(this)" src="images/art5.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 6" onclick="openLightbox(this)" src="images/art6.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 7" onclick="openLightbox(this)" src="images/art7.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 8" onclick="openLightbox(this)" src="images/art8.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 9" onclick="openLightbox(this)" src="images/art9.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 10" onclick="openLightbox(this)" src="images/art10.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 11" onclick="openLightbox(this)" src="images/art11.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 12" onclick="openLightbox(this)" src="images/art12.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 13" onclick="openLightbox(this)" src="images/art13.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 14" onclick="openLightbox(this)" src="images/art14.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 15" onclick="openLightbox(this)" src="images/art15.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 16" onclick="openLightbox(this)" src="images/art16.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 17" onclick="openLightbox(this)" src="images/art17.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 18" onclick="openLightbox(this)" src="images/art18.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 19" onclick="openLightbox(this)" src="images/art19.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 20" onclick="openLightbox(this)" src="images/art20.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 21" onclick="openLightbox(this)" src="images/art21.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 22" onclick="openLightbox(this)" src="images/art22.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 23" onclick="openLightbox(this)" src="images/art23.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 24" onclick="openLightbox(this)" src="images/art24.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 25" onclick="openLightbox(this)" src="images/art25.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 26" onclick="openLightbox(this)" src="images/art26.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 27" onclick="openLightbox(this)" src="images/art27.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 28" onclick="openLightbox(this)" src="images/art28.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 29" onclick="openLightbox(this)" src="images/art29.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 30" onclick="openLightbox(this)" src="images/art30.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 31" onclick="openLightbox(this)" src="images/art31.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 32" onclick="openLightbox(this)" src="images/art32.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 33" onclick="openLightbox(this)" src="images/art33.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 34" onclick="openLightbox(this)" src="images/art34.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 35" onclick="openLightbox(this)" src="images/art35.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 36" onclick="openLightbox(this)" src="images/art36.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 37" onclick="openLightbox(this)" src="images/art37.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 38" onclick="openLightbox(this)" src="images/art38.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 39" onclick="openLightbox(this)" src="images/art39.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 40" onclick="openLightbox(this)" src="images/art40.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 41" onclick="openLightbox(this)" src="images/art41.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 42" onclick="openLightbox(this)" src="images/art42.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 43" onclick="openLightbox(this)" src="images/art43.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 44" onclick="openLightbox(this)" src="images/art44.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 45" onclick="openLightbox(this)" src="images/art45.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 46" onclick="openLightbox(this)" src="images/art46.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 47" onclick="openLightbox(this)" src="images/art47.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 48" onclick="openLightbox(this)" src="images/art48.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 49" onclick="openLightbox(this)" src="images/art49.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 50" onclick="openLightbox(this)" src="images/art50.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 51" onclick="openLightbox(this)" src="images/art51.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 52" onclick="openLightbox(this)" src="images/art52.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 53" onclick="openLightbox(this)" src="images/art53.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 54" onclick="openLightbox(this)" src="images/art54.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 55" onclick="openLightbox(this)" src="images/art55.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 56" onclick="openLightbox(this)" src="images/art56.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 57" onclick="openLightbox(this)" src="images/art57.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 58" onclick="openLightbox(this)" src="images/art58.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 59" onclick="openLightbox(this)" src="images/art59.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 60" onclick="openLightbox(this)" src="images/art60.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 61" onclick="openLightbox(this)" src="images/art61.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 62" onclick="openLightbox(this)" src="images/art62.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 63" onclick="openLightbox(this)" src="images/art63.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 64" onclick="openLightbox(this)" src="images/art64.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 65" onclick="openLightbox(this)" src="images/art65.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 66" onclick="openLightbox(this)" src="images/art66.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 67" onclick="openLightbox(this)" src="images/art67.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 68" onclick="openLightbox(this)" src="images/art68.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 69" onclick="openLightbox(this)" src="images/art69.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 70" onclick="openLightbox(this)" src="images/art70.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 71" onclick="openLightbox(this)" src="images/art71.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 72" onclick="openLightbox(this)" src="images/art72.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 73" onclick="openLightbox(this)" src="images/art73.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 74" onclick="openLightbox(this)" src="images/art74.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 75" onclick="openLightbox(this)" src="images/art75.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 76" onclick="openLightbox(this)" src="images/art76.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 77" onclick="openLightbox(this)" src="images/art77.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 78" onclick="openLightbox(this)" src="images/art78.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 79" onclick="openLightbox(this)" src="images/art79.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 80" onclick="openLightbox(this)" src="images/art80.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 81" onclick="openLightbox(this)" src="images/art81.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 82" onclick="openLightbox(this)" src="images/art82.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 83" onclick="openLightbox(this)" src="images/art83.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 84" onclick="openLightbox(this)" src="images/art84.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 85" onclick="openLightbox(this)" src="images/art85.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 86" onclick="openLightbox(this)" src="images/art86.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 87" onclick="openLightbox(this)" src="images/art87.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 88" onclick="openLightbox(this)" src="images/art88.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 89" onclick="openLightbox(this)" src="images/art89.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 90" onclick="openLightbox(this)" src="images/art90.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 91" onclick="openLightbox(this)" src="images/art91.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 92" onclick="openLightbox(this)" src="images/art92.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 93" onclick="openLightbox(this)" src="images/art93.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+     <div class="art-piece">
+      <img alt="Artwork 94" onclick="openLightbox(this)" src="images/art94.jpg"/>
+      <p class="caption">
+       Untitled — Oil on canvas
+      </p>
+     </div>
+    </div>
+   </section>
+   <section id="about">
+    <h2>
+     About the Artist
+    </h2>
+    <p>
+     Elisa Foster is a visual artist inspired by natural forms, human emotion, and the tactile qualities of her materials. Each piece is a personal exploration rendered in organic textures and rich, earthy tones.
+    </p>
+   </section>
+   <section id="contact">
+    <h2>
+     Contact
+    </h2>
+    <p>
+     Follow Elisa on social media:
+    </p>
+    <ul>
+     <li>
+      <a href="#">
+       Instagram (placeholder)
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Facebook (placeholder)
+      </a>
+     </li>
+    </ul>
+   </section>
   </main>
-
   <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Expanded Artwork">
+   <img alt="Expanded Artwork" id="lightbox-img" src=""/>
   </div>
-
   <footer>
-    <p>&copy; 2025 Elisa Foster Art. All rights reserved.</p>
+   <p>
+    © 2025 Elisa Foster Art. All rights reserved.
+   </p>
   </footer>
-
   <script>
-    function openLightbox(img) {
+   function openLightbox(img) {
       document.getElementById('lightbox-img').src = img.src;
       document.getElementById('lightbox').style.display = 'flex';
     }
@@ -453,5 +753,5 @@
       document.getElementById('lightbox').style.display = 'none';
     }
   </script>
-</body>
+ </body>
 </html>
