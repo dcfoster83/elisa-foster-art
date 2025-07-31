@@ -1,77 +1,99 @@
 <!-- Elisa Foster Art - Portfolio Website -->
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Elisa Foster Art
-  </title>
-  <link href="style.css" rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisa Foster Art</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-   body {
+    body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #1e1e1c;
-      color: #f0e9d2;
+      font-family: 'Cormorant Garamond', serif;
+      background: url('images/bg-texture.jpg') repeat;
+      background-color: #fdf8f3;
+      color: #2e2a26;
     }
 
     header {
       position: sticky;
       top: 0;
-      background-color: #2c2c28;
+      background-color: rgba(255, 255, 255, 0.85);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid #d3c4b3;
       z-index: 10;
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #e0c097;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #9b7d59;
     }
 
     .nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: #d9cbaa;
+      color: #7a6651;
       font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #a8845c;
     }
 
     .hero {
       text-align: center;
       padding: 5rem 2rem;
-      background-color: #2c2c28;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     h1, h2 {
-      color: #d6b877;
+      color: #7d5b38;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
+      column-count: 3;
+      column-gap: 1rem;
       padding: 2rem;
+    }
+
+    .art-piece {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 1rem;
+      transform: rotateZ(calc(var(--r, 0) * 1deg));
     }
 
     .art-piece img {
       width: 100%;
       height: auto;
-      border: 2px solid #444;
+      border: 1px solid #d3c4b3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .art-piece img:hover {
       transform: scale(1.03);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      color: #5a4c3a;
+      text-align: center;
+      margin-top: 0.3rem;
+      font-style: italic;
     }
 
     section {
       padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.6);
     }
 
     #lightbox {
@@ -81,7 +103,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       justify-content: center;
       align-items: center;
       z-index: 1000;
@@ -90,40 +112,32 @@
     #lightbox img {
       max-width: 90%;
       max-height: 90%;
+      box-shadow: 0 0 20px rgba(240, 230, 210, 0.8);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #2c2c28;
-      border-top: 1px solid #444;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-top: 1px solid #d3c4b3;
     }
 
     a {
-      color: #b8a98c;
+      color: #7a6651;
     }
   </style>
- </head>
- <body>
+</head>
+<body>
   <header>
-   <div class="logo">
-    Elisa Foster Art
-   </div>
-   <nav class="nav">
-    <a href="#home">
-     Home
-    </a>
-    <a href="#portfolio">
-     Portfolio
-    </a>
-    <a href="#about">
-     About
-    </a>
-    <a href="#contact">
-     Contact
-    </a>
-   </nav>
+    <div class="logo">Elisa Foster Art</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+
   <main>
    <section id="home">
     <div class="hero">
